@@ -1,50 +1,29 @@
-# Welcome to your Expo app 👋
+# Mobile application for events
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Created with Expo [`create-expo-app`](https://www.npmjs.com/package/create-expo-app)
 
-## Get started
+## Tech stack
 
-1. Install dependencies
+React native, Expo, JavaScript
 
-   ```bash
-   npm install
-   ```
+## Cloudstack
 
-2. Start the app
+Firebase, Google Cloud, Cloudinary
 
-   ```bash
-    npx expo start
-   ```
+# Description
 
-In the output, you'll find options to open the app in a
+This is a mobile application, that allows it's users to see events, that have been posted. <br>
+Users can create accounts and with them, they can take participants in the events and also create one. <br>
+The application support authorization with valid Google account. <br>
+If user has logged in with Google account, there is a automatic synchronization with Google Calendar when the user purchase ticket. This is followed with alarm when the event start date come. <br>
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Database
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+The project uses cloud based database. It's name is Firebase Database. It is a NoSQL, document-based database. In the project there are two collections:
 
-## Get a fresh project
+1. Users - stores data for every user that has created or used Google account
+2. Events - stores data about the events, such as event name, location, start and end date and price ticket
 
-When you're ready, run:
+## Storage
 
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+When user creates event he can select images from his phone. This images idea is to describe the event or give more information about it. Images are stored in Cloudinary cloud service. First they are uploaded and then their url is saved in array field named images that every event document has in the database.
