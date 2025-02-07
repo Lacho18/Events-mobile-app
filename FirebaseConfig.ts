@@ -5,9 +5,6 @@ import ReactNativeAsyncStorage from "@react-native-async-storage/async-storage";
 //import { ReactNativeAsyncStorage } from "@react-native-async-storage/root";
 import { getFirestore, collection, getDocs } from "firebase/firestore/lite";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
 const firebaseConfig = {
   apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.EXPO_PUBLIC_AUTH_DOMAIN,

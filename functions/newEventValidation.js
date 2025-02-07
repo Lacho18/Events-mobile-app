@@ -40,8 +40,6 @@ function newEventValidation(newEvent) {
     if (newEvent.dateOfPerformance > newEvent.endOfPerformance) {
         throw new Error("The event can not end before it has begun. You should chang your end date!");
     }
-
-    console.log("Vuh male");
 }
 
 export default newEventValidation;

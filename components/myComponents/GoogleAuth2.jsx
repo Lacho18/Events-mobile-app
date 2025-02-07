@@ -115,7 +115,7 @@ export default function GoogleAuth2({ logInHandler }) {
           },
         }
       );
-      console.log(response.data); // Събитието е създадено
+      console.log(response.data); // The event is created
     } catch (error) {
       console.error(error);
     }

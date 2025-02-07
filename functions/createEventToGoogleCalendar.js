@@ -1,10 +1,5 @@
 import axios from "axios";
 
-/*
-    1. Pregleday vseki edin fail i mahni nenyshnite veche console.log
-    2. Dobavi logika za tova pri kypyvane na bileta da se dobavq kum masiva na potrebitelq - WillParticipate
-*/
-
 async function createEventToGoogleCalendar(token, event) {
     const dateOfPerformance = event.dateOfPerformance.toDate();
     const endOfPerformance = event.endOfPerformance.toDate();
@@ -33,7 +28,7 @@ async function createEventToGoogleCalendar(token, event) {
                 },
             }
         );
-        console.log(response.data); // Събитието е създадено
+        console.log(response.data); // The event is created
     } catch (error) {
         console.error(error);
     }
